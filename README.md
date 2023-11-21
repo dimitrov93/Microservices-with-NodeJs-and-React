@@ -1,2 +1,2 @@
 # Microservices with NodeJs
- Microservices with NodeJs -  Course from Udemy
+ Microservices with NodeJs, ReactJs, Docker and Kubernetes -  Course from Udemy
