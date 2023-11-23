@@ -51,3 +51,26 @@ or
 
 Docker run
 - docker run -it -p 8080:8080 ceko/simpleweb
+
+
+### k8s
+- kubectl apply -f posts-depl.yaml || kubectl apply -f . (for all)
+- kubectl get pods
+- kubectl delete pod posts
+- kubectl logs <pod-id>
+- kubectl get deployments
+
+---- docker push DOCKERHUB_USER/posts
+---- docker build -t DOCKERHUB_USER/posts .
+
+- kubectl rollout restart deployment posts-depl
+- kubectl get services
+- kubectl describe service posts-srv
+- kubectl rollout restart deployment post-depl
+
+
+### Composition
+- Build an Image                                -> docker build  -t dimitrov93/event-bus .
+- Push the Image to Docker Hub                  -> docker push dimitrov93/event-bus
+- Create deployment                             -> kubectl apply -f event-bus-depl.yaml
+- Create a Cluster IP service
