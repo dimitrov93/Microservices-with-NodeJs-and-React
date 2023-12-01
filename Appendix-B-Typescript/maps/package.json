@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@types/google.maps": "^3.54.10"
+  },
+  "scripts": {
+    "start": "rm -rf .parcel-cache && parcel"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3"
+  }
+}
