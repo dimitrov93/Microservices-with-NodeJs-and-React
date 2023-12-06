@@ -6,3 +6,23 @@ Steps
 5) ingress-srv.yaml
 6) Hosts file - C:\Windows\System32\drivers\etc
 7) type - thisisunsafe - in chrome anywhere on the screen
+
+8) create google cloud cluster + installing google SDK
+9) configure the sdk to the project
+
+
+Without Docker
+10) gcloud components install kubectl -> gcloud container clusters get-credintials <cluster-name>
+
+gcloud components install gke-gcloud-auth-plugin
+
+With Docker
+10) gcloud container clusters get-credintials <cluster-name>
+
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
+
+11) gcloud auth application-default login
+11) skaffold dev
