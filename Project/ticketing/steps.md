@@ -26,3 +26,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 11) gcloud auth application-default login
 11) skaffold dev
+
+12) kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asd
+kubectl describe secret jwt-secret
+kubectl delete secret jwt-secret
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
