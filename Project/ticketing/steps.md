@@ -31,3 +31,6 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 kubectl describe secret jwt-secret
 kubectl delete secret jwt-secret
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
+
+
+    // "start": "tsc-watch --onSuccess 'ts-node-dev src/index.ts'" 
