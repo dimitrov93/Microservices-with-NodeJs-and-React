@@ -5,6 +5,8 @@ export default ({ currentUser }) => {
     !currentUser && { label: 'Sign Up', href: '/auth/signup' },
     !currentUser && { label: 'Sign In', href: '/auth/signin' },
     currentUser && { label: 'Sign Out', href: '/auth/signout' },
+    currentUser && { label: 'Create Ticket', href: '/tickets/new' },
+    currentUser && { label: 'My orders', href: '/orders' },
   ]
     .filter((linkConfig) => linkConfig)
     .map(({ label, href }) => {
@@ -20,7 +22,7 @@ export default ({ currentUser }) => {
   return (
     <nav className="navbar navbar-light bg-light">
       <Link className="navbar-brand" href="/">
-        GitTix
+        TicketingDev
       </Link>
 
       <div className="d-flex justify-content-end">
