@@ -16,7 +16,7 @@ it("returns a 404 when purchesing an order that does not exist", async () => {
       token: "asdf",
       orderId: new mongoose.Types.ObjectId().toHexString(),
     })
-    .expect(400);
+    .expect(404);
 });
 
 it("returns a 401 when purchesing an order that does not belong to the user", async () => {
@@ -57,7 +57,7 @@ it("returns a 400 when purchesing a cancelled order", async () => {
       orderId: order.id,
       token: "asdlkfj",
     })
-    .expect(404);
+    .expect(400);
 });
 
 it("returns a 201 with valid inputs", async () => {
