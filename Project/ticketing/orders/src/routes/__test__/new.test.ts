@@ -14,7 +14,7 @@ it("returns an error if the ticket does not exist", async () => {
     .post("/api/orders")
     .set("Cookie", global.signin())
     .send({ ticketId })
-    .expect(400);
+    .expect(404);
 });
 
 it("returns an error if the ticket is already reserved", async () => {
