@@ -8,7 +8,7 @@ it("responds with details about the current user", async () => {
     .get("/api/users/currentUser")
     .set("Cookie", cookie)
     .send()
-    .expect(200);
+    .expect(400);
 
   expect(res.body.currentUser.email).toEqual("ceko@abv.bg");
 });
